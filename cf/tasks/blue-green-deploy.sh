@@ -47,6 +47,6 @@ for name in $app_names; do
     then
       # clean up blue
       cf unmap-route $app_name $CF_DOMAIN -n $CF_HOSTNAME
-      cf delete $app_name -f
+      cf delete $app_name -f -r
     fi
 done
