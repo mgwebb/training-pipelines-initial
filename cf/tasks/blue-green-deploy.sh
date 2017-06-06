@@ -46,7 +46,7 @@ for name in $app_names; do
     if [ "$name" != "$app_name" ]
     then
       # clean up blue
-      cf unmap-route $app_name $CF_DOMAIN -n $CF_HOSTNAME
-      cf delete $app_name -f -r
+      cf unmap-route $name $CF_DOMAIN -n $CF_HOSTNAME
+      cf delete $name -f -r
     fi
 done
